@@ -2,6 +2,7 @@
 Parser testing for my bachelor project.
 
 ## 0tý test
+- jak řešit Node.js only libraries oproti běhu ve Vite prostředí?
 
 ## První test:
 
