@@ -55,3 +55,36 @@ ANTL4
 - dobrý na vytváření vlastních gramatik a braní již existujících
 
 https://github.com/antlr/grammars-v4/tree/master
+
+
+## cesta k univezálními formátu
+
+For a universal format, you'd want something that is:
+
+    Expressive – Can represent all necessary constructs of supported languages.
+    Extensible – Can be expanded for future language features.
+    Standardized – Preferably an existing format that integrates well with tooling.
+
+Potential Candidates:
+
+    UAST (Universal Abstract Syntax Tree) – Used by Babel and Source{d}, supports multiple languages.
+    JSON Schema AST – A structured JSON-based AST, easier to work with in web environments.
+    ANTLR AST – If you’re using ANTLR, you can work with its generic tree representation.
+    S-Expressions – Used in Lisp-based ASTs, compact but less common for modern languages.
+    E-Graph (Equality Graphs) – Used in tools like egg, great for transformations.
+
+If you want JSON-based, UAST is a strong contender. If you prefer a structured and normalized AST, something like ANTLR's generic format could work well. Would you prefer a tree format, or something more relational?
+
+
+
+Best Approach?
+
+    For JavaScript/TypeScript: Babel or Esprima.
+    For Python, Java, C#: Tree-Sitter.
+    For SQL: ANTLR4TS-SQL.
+    For XML/RDF: xml2js.
+
+Would you like a common interface to handle different languages?
+
+
+----- ASTs v Json formátu?
