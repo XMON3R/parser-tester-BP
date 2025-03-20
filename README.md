@@ -87,4 +87,35 @@ Best Approach?
 Would you like a common interface to handle different languages?
 
 
+
+
+
+
+
+DŮLEŽITÉ! asi i tak nutné udělat pro polyfills, což není zcela ideální...
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { nodePolyfills } from 'vite-plugin-node-polyfills'
+
+
+/*
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
+*/
+
+export default defineConfig({
+  plugins: [react(), nodePolyfills()],
+  optimizeDeps: {
+    include: ['fs']
+  }
+});
+
+
+
+
 ----- ASTs v Json formátu?
+
+
