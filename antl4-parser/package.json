@@ -7,25 +7,33 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate": "antlr4ts -o src/parser/generated -visitor src/parser/grammars/MyGrammar.g4",
+    "generateTwo": "antlr4ts -o src/parser/generated -visitor src/parser/grammars/csharp/CSharpLexer.g4 src/parser/grammars/csharp/CSharpParser.g4 src/parser/grammars/csharp/CSharpPreprocessorParser.g4",
+    "antlr4ts": "antlr4ts -visitor path/to/MyGrammar.g4"
   },
   "dependencies": {
+    "antlr4-autosuggest": "^0.0.28",
     "antlr4ts": "^0.5.0-alpha.4",
     "antlr4ts-sql": "^1.1.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "util": "^0.12.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "antlr4ts-cli": "^0.5.0-alpha.4",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-node-polyfills": "^0.23.0"
   }
 }
