@@ -21,9 +21,7 @@ createRoot(document.getElementById('root')!).render(
 )
 
 
-
 console.log("hi");
-
 
 
 
